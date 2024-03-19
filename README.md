@@ -1,1 +1,1 @@
-# group4-fitness-tracking-app
+# React Fitness Tracking Application
