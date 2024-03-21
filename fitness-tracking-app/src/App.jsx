@@ -3,9 +3,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Navbar from './components/Navbar.jsx';
-import Login from './components/Pages/Login.jsx';
+import Login from './components/Pages/Auth/Login.jsx';
 import Dashboard from './components/Pages/Dashboard';
-import Register from './components/Pages/Register.jsx';
+import Register from './components/Pages/Auth/Register.jsx';
+
 import ProtectedRoute from './components/Routes/ProtectedRoute.jsx';
 function App() {
   return (

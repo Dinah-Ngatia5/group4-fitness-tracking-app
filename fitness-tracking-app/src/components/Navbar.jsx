@@ -4,6 +4,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import SignOut from './Pages/Auth/SignOut';
 
 function Navbar() {
   return (
@@ -21,7 +22,7 @@ function Navbar() {
         <Button component={Link} to="/social" color="inherit">Social Feed</Button>
         <Button component={Link} to="/workout" color="inherit">Workout Plan</Button>
         <Button component={Link} to="/login" color="inherit">Login</Button>
-        <Button component={Link} to="/register" color="inherit">Register</Button>
+        <SignOut />
       </Toolbar>
     </AppBar>
   );
