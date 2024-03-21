@@ -20,7 +20,7 @@ export const Login = () => {
 
     if (email === storedEmail && password === storedPassword) {
       // Login successful, navigate to dashboard
-      navigate('/dashboard');
+      navigate();
     } else {
       // Display error message or handle authentication failure
       alert('Invalid email or password');

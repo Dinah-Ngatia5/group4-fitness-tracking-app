@@ -1,9 +1,10 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 
-const ProtectedRoute = (Component) => {
-    const auth = false; //your logic
+const ProtectedRoute = ({ Component }) => {
+    const auth = false; // Your authentication logic goes here
 
-    return auth ? <Component /> : <Navigate to="/dashboard" />
-}
+    return auth ? <Component /> : <Navigate to="/dashboard" />;
+};
+
 export default ProtectedRoute;
