@@ -9,7 +9,7 @@ function ExerciseList() {
     useEffect(()=> {
         const fetchExercises = async () => {
             try {
-                const response = await axios.get("https://exercisedb.p.rapidapi.com/exercises", {
+                const response = await axios.get("https://exercisedb.p.rapidapi.com/", {
                     headers: {
                        'X-RapidAPI-Key': "MY-API-KEY",
                        "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
