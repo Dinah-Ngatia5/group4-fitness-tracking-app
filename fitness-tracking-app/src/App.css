@@ -1,11 +1,20 @@
 .container {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 400px;
+  margin: 50px auto; /* Adjusted margin to center the container */
   padding: 20px;
+  border: 2px solid blue;
+  border-radius: 8px;
+  text-align: center;
+  background-color: aqua;
+  
 }
 
 h1 {
   text-align: center;
+}
+
+h2 {
+  margin-top: 20px;
 }
 
 form {
@@ -13,13 +22,28 @@ form {
 }
 
 input[type="text"],
-input[type="number"],
-button {
-  margin-right: 10px;
+input[type="number"] {
+  width: 8%;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 }
 
 ul {
@@ -28,27 +52,17 @@ ul {
 }
 
 li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.goal-form {
-  border: 1px solid #ccc;
-  padding: 20px;
+.card {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  padding: 16px;
   margin-bottom: 20px;
 }
 
-.weight-form {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin-bottom: 20px;
+.card h3 {
+  margin-top: 0;
 }
 
-.weekly-weight-trend {
-  margin-top: 20px;
-}
-
-.food-eaten-form {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin-bottom: 20px;
-}
