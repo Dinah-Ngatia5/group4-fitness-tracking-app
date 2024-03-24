@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import { ThemeProvider, createTheme } from "@material-ui/core";
-import ActivityTracker from "./components/Pages/ActivityTracker"
 import WorkoutPlan from "./components/Pages/WorkoutPlan";
-import ExerciseList from "./components/Pages/ExerciseList";
 import ExerciseDetails from "./components/Pages/ExerciseDetails";
 import Settings from "./components/Pages/Settings";
+import ContactUS from "./components/Pages/Contact";
+import About from "./components/Pages/About"
 
 
 
@@ -31,14 +31,14 @@ function App () {
         <div>
           <h1>Fitness Tracker</h1>
           <Switch>
-            <Route path="/activity-tracker">
+            <Route path="/">
               <ActivityTracker />
               </Route>
               <Route path= "/workout-plan">
                 <WorkoutPlan />
             </Route>
             <Route path="/exercise/:id" component={ExerciseDetails} />
-            <Route path= "/exercises">
+            <Route path= "/">
               <ExerciseList />
             </Route>
             <Route path="/">

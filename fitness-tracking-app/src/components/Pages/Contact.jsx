@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     margin: 'auto',
     maxWidth: 600,
-    backgroundColor: '#f5f5dc', // Beige background color
+    backgroundColor: '#f5f5dc', // Beige 
     borderRadius: theme.spacing(2),
   },
   title: {
@@ -31,19 +31,19 @@ const ContactUS = () => {
   const classes = useStyles();
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: ""
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem('contactFormData', JSON.stringify(formData));
-    // Clear form fields
+
     setFormData({
-      name: '',
-      email: '',
-      message: ''
+      name: "",
+      email: "",
+      message: ""
     });
 
     setOpenSnackbar(true);
@@ -75,13 +75,13 @@ const ContactUS = () => {
           required
         />
         <TextField
-          className={classes.textField}
-          variant="outlined"
-          label="Email"
-          type="email"
-          onChange={handleChange}
-          fullWidth
-          required
+        className={classes.textField}
+        variant="outlined"
+        label="Email"
+        type="email"
+        onChange={handleChange}
+        fullWidth
+        required
         />
         <TextField
           className={classes.textField}

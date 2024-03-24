@@ -1,85 +1,164 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import {Container, Typography, List, ListItem, ListItemText, Button, Box, makeStyles } from "@material-ui/core";
-import {Link} from "react-router-dom";
-import Pagination from '@material-ui/lab/Pagination';
+//const apiKey = 'a4d126b3da0d64451ded4ebf83fdf364fbdd54e8';
+//const exerciseEndpoint = 'https://wger.de/api/v2/exercise/';
+
+//fetch(exerciseEndpoint, {
+ // headers: {
+ //   Authorization: `Token ${apiKey}`
+ // }
+//})
+ // .then(response => response.json())
+ // .then(data => console.log(data))
+ // .catch(error => console.error('Error:', error));
 
 
-const useStyles = makeStyles((theme)=> ({
-    container: {
-        backgroundColor: theme.palette.background.default,
-        padding: theme.spacing(2),
-    },
-    headline: {
-        color: theme.palette.primary.main,
-    },
-    accentText: {
-        color: theme.palette.secondary.main,
-    },
-}));
-
-function WorkoutPlan() {
+ import React, { useState, useEffect } from "react";
+ import axios from "axios";
+ import { Grid, TextField, Button, Typography,CircularProgress } from "@material-ui/core";
+ import Pagination from "@material-ui/lab/Pagination";
+ import { makeStyles } from "@material-ui/core/styles";
+ //import {useHistory} from "react-router-dom"
+ 
+ const useStyles = makeStyles((theme) => ({
+   root: {
+     backgroundColor: theme.palette.background.basilOrange50,
+     padding: theme.spacing(2),
+     fontFamily: "monospace",
+   },
+   heading: {
+     color: theme.palette.text.basilOrange800,
+   },
+   text: {
+     color: theme.palette.text.basilGreen500,
+   },
+ }));
+ 
+ const WorkoutPlan = () => {
+   const apiKey = 'a4d126b3da0d64451ded4ebf83fdf364fbdd54e8';
+ 
    const classes = useStyles();
-   const [workoutSessions, setWorkoutSessions] = useState([]);
-   const [currentPage, setCurrentPage] = useState(1);
-   const[totalPages, setTotalPages] = useState(1);
-
+ 
+   const [exerciseImages, setExerciseImages] = useState([]);
+   const [searchResults, setSearchResults] = useState([]);
+   const [searchCriteria, setSearchCriteria] = useState({
+     duration: '',
+     intensity: '',
+     name: '', 
+   });
+   const [page, setPage] = useState(1);
+   const [totalPages, setTotalPages] = useState(1);
+   const [loading, setLoading] = useState(false);
+   
+ 
    useEffect(() => {
-    const fetchExercises = async () => {
-        try {
-            const response = await axios.get("https://exercisedb.p.rapidapi.com/exercises", {
-                headers: {
-                    'X-RapidAPI-Key':"4853b6f1c9msh13de3517e7da380p1e7ccejsn2142c1853fa9",
-                    'X-RapidAPI-Host': "exercisedb.p.rapidapi.com",
-                },
-                params: {
-                    page: currentPage,
-                    limit: 10, 
-                },
-            });
-            setWorkoutSessions(response.data.results);
-            setTotalPages(Math.ceil(response.data.totalCount / 10));
-        } catch (error) {
-            console.error("Error fetching exercises:", error);
-        }
-    };
-
-    fetchExercises();
-   }, [currentPage]);
-
-   const handlePageChange = (event, value) => {
-    setCurrentPage(value)
+     const fetchExerciseImages = async () => {
+       try {
+         const response = await axios.get('https://wger.de/api/v2/exerciseimage/', {
+           headers: {
+             Authorization: `Token ${apiKey}`
+           }
+         });
+         setExerciseImages(response.data.results);
+       } catch (error) {
+         console.error('Error fetching exercise images:', error);
+       }
+     };
+ 
+     fetchExerciseImages();
+   }, []);
+ 
+   const handleSearch = async () => {
+     try {
+       const response = await axios.get('https://wger.de/api/v2/exercise', {
+         headers: {
+           Authorization: `Token ${apiKey}`
+         },
+         params: {
+           page,
+           ...searchCriteria,
+           language: "2",
+         },
+       });
+       setSearchResults(response.data.results);
+       setTotalPages(response.data.count);
+     } catch (error) {
+       console.error('Error searching for workout routines:', error);
+     } finally {
+       setLoading(false);
+     }
    };
-
+ 
+   const handlePageChange = (event, value) => {
+     setPage(value);
+   };
+ 
+   const filterExerciseByName = (name) => {
+     return searchResults.filter(result => result.name.toLowerCase().includes(name.toLowerCase()));
+   };
+ 
+   const handleSearchCriteriaChange = (e) => {
+     const { name, value } = e.target;
+     setSearchCriteria({ ...searchCriteria, [name]: value });
+     if (name === 'name') {
+       setSearchResults(filterExerciseByName(value));
+     }
+   };
+ 
    return (
-    <Container maxWidth= "sm" className={classes.container}>
-        <Typography variant="h4" gutterBottom className={classes.headline}>
-            WorkoutPlan
-        </Typography>
-        <List>
-            {workoutSessions.map((session)=> (
-                <ListItem key={session.id}>
-                    <ListItemText 
-                    primary={<Typography className={classes.accentText}>{session.name}</Typography>}
-                    secondary= {`Description: ${session.description},Intensity: ${session.intensity}, Duration:{session.duration} minutes`}
-                    />
-                    <Button component= {Link} to={`/exercises/exercise/${session.id}`} variant="contained" color="primary">
-                        View Details
-                    </Button>
-                </ListItem>
-            ))}
-        </List>
-        <Box mt={2} display="flex" justifyContent="center">
-            <Pagination 
-            count={totalPages}
-            page={currentPage}
-            onChange={handlePageChange}
-            color="primary"
-            />
-        </Box>
-
-    </Container>
+     <div className={classes.root}>
+       <Typography variant="h1" align="center" className={classes.heading}>Workout App</Typography>
+       <Grid container spacing={3} justifyContent="center" alignItems="center">
+         <Grid item xs={12} sm={4}>
+           <TextField
+             fullWidth
+             label="Duration"
+             name="duration"
+             value={searchCriteria.duration}
+             onChange={handleSearchCriteriaChange}
+             className={classes.text}
+           />
+         </Grid>
+         <Grid item xs={12} sm={4}>
+           <TextField
+             fullWidth
+             label="Intensity"
+             name="intensity"
+             value={searchCriteria.intensity}
+             onChange={handleSearchCriteriaChange}
+             className={classes.text}
+           />
+         </Grid>
+         <Grid item xs={12} sm={4}>
+           <TextField
+             fullWidth
+             label="Name" 
+             name="name"
+             value={searchCriteria.name}
+             onChange={handleSearchCriteriaChange}
+             className={classes.text}
+           />
+         </Grid>
+         <Grid item xs={12} sm={4}>
+           <Button variant="contained" color="primary" onClick={handleSearch}>Search</Button>
+         </Grid>
+       </Grid>
+       {loading && <CircularProgress style={{ marginTop: '20px' }} />}
+       <Grid container spacing={3} justifyContent="center" >
+         {searchResults.map((result) => (
+           <Grid key={result.id} item xs={12} sm={6} md={4}>
+             <div>
+               <Typography variant="h3" className={classes.heading}>{result.name}</Typography>
+               <Typography variant="body1" className={classes.text}>Description: {result.description.replace(/<\/?[^>]+(>|$)/g, "")}</Typography>
+             </div>
+           </Grid>
+         ))}
+       </Grid>
+ 
+       <Grid container justifyContent="center">
+         <Pagination count={totalPages} page={page} onChange={handlePageChange} />
+       </Grid>
+     </div>
    );
-}
-
-export default WorkoutPlan;
+ };
+ 
+ export default WorkoutPlan;
+ 
