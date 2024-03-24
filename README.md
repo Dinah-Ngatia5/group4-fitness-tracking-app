@@ -10,9 +10,9 @@ A Kaleidoscope of Wellness
 Immerse yourself in a multifaceted tapestry of features, meticulously woven to elevate your fitness odyssey to unprecendented heights. FitSynergy is an indispensable ally on your quests for holistic rejuvenation. Features:
 
   
-- Goal Setting Page
+-  Goal Setting Page
 
- Stay motivated and focused on your fitness journey with our intuitive goal setting feature. Set specific, measurable, achievable, relevant, and time-bound (SMART) goals for various aspects of your fitness routine. Track your progress in real-time and celebrate milestones as you work towards achieving your desired outcomes.
+  Stay motivated and focused on your fitness journey with our intuitive goal setting feature. Set specific, measurable, achievable, relevant, and time-bound (SMART) goals for various aspects of your fitness routine. Track your progress in real-time and celebrate milestones as you work towards achieving your desired outcomes.
 
 
 - Nutrition Tracking
@@ -35,25 +35,25 @@ Immerse yourself in a multifaceted tapestry of features, meticulously woven to e
   
 
 
-  With these robust features, our fitness tracking app empowers you to take control of your health and fitness goals. Whether you're a seasoned athlete or just starting your wellness journey, our app provides the tools and resources you need to achieve sustainable results and lead an active, balanced lifestyle.
+With these robust features, our fitness tracking app empowers you to take control of your health and fitness goals. Whether you're a seasoned athlete or just starting your wellness journey, our app provides the tools and resources you need to achieve sustainable results and lead an active, balanced lifestyle.
 
 
 
 ## Table of Contents 
 
-1. [Getting Started](URL)
+1. [Getting Started](https://github.com/Dinah-Ngatia5/group4-fitness-tracking-app?tab=readme-ov-file#getting-started)
 
-2. [Technology Stack](URL)
+2. [Technology Stack](https://github.com/Dinah-Ngatia5/group4-fitness-tracking-app?tab=readme-ov-file#technology-stack)
 
-3. [License](URL)
+3. [License](https://github.com/Dinah-Ngatia5/group4-fitness-tracking-app?tab=readme-ov-file#license)
 
-4. [Acknowledgements](URL)
+4. [Acknowledgements](https://github.com/Dinah-Ngatia5/group4-fitness-tracking-app?tab=readme-ov-file#acknowledgements)
 
-5. [Contributing](URL)
+5. [Contributing](https://github.com/Dinah-Ngatia5/group4-fitness-tracking-app?tab=readme-ov-file#contributing)
 
-6. [Contact Information](URL)
+6. [Contact Information](https://github.com/Dinah-Ngatia5/group4-fitness-tracking-app?tab=readme-ov-file#contact-information)
 
-7. [Final Remarks](URL)
+7. [Final Remarks](https://github.com/Dinah-Ngatia5/group4-fitness-tracking-app?tab=readme-ov-file#final-remarks)
 
 
 
@@ -190,7 +190,7 @@ We'll do our best to assist you and address your concerns promptly
 
 ## Final Remarks
 
-Embrace the clarion call of FitSynergy, and embark on this transformative odyssey, where the fusion of technology and determination forges an unbreakable alliance, catalyzing your ascension towards the epitome of holistic well-being. Your journey towards lifelong vitality begins here, and FitSynergy stands as your unwavering ally, guiding you through the intricate realms of self-mastery and empowering you to unveil the resplendent apotheosis of your mind, body, and spirit.
+Embrace the clarion call of FitSynergy, and embark on this transformative odyssey, where the fusion of technology and determination forges an unbreakable alliance, catalyzing your ascension towards the epitome of holistic well-being. Your journey towards lifelong vitality begins here, and FitSynergy stands as your unwavering ally, guiding you through the intricate realms of self-mastery and empowering you to unveil the resplendent apotheosis of your mind, body, and spirit!!!
 
 
 
