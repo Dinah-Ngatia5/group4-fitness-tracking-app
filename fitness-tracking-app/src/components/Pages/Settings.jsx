@@ -33,16 +33,18 @@ const useStyles = makeStyles((theme) => ({
 const Settings = () => {
   const classes = useStyles();
   const [profile, setProfile] = useState({
-    name: '',
-    age: '',
-    gender: '',
+    name: "",
+    age: "",
+    gender: "",
     weight: '',
-    height: '',
+    height: "",
   });
   const [unitSystem, setUnitSystem] = useState('metric');
   const [notification, setNotification] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
+
+  
   useEffect(() => {
     const savedSettings = JSON.parse(localStorage.getItem('fitnessSettings'));
     if (savedSettings) {

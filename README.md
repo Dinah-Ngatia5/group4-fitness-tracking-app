@@ -2,7 +2,7 @@
 
 Embark on a transformative journey, where the symphony of mind, body and spirit converges into a harmonious crescendo. FitSynergy, an immersive and empowering fitness tracking companion, beckons you to transcend conventional boundaries and embrace the boundless realms of physical and mental invigoration.
 
- In rather simple words, this is a cutting-edge fitness tracking application designed to empower users on their journey towards optimal health and well-being.With FitSynergy, users can embark on a transformative fitness journey, leveraging the power of cutting-edge technology to unlock their full potential and achieve their health and wellness goals with unprecedented precision and insight.
+ In rather simple words, this is a cutting-edge fitness tracking application designed to empower users on their journey towards optimal health and well-being.With FitSynergy, users can embark on a transformative fitness odyssey, leveraging the power of cutting-edge technology to unlock their full potential and achieve their health and wellness goals with unprecedented precision and insight.
 
 A Kaleidoscope of Wellness
 
@@ -71,7 +71,7 @@ Feel free to explore the app and take advantage of its features to embark on you
 
  The frontend of FitSynergy is developed using the following tools and frameworks: 
 
-- React - A popular of JavaScript library for building user interfaces, known for its component-based architecture and virtual DOM implementation which ensures efficient rendering and updates.
+- React: A popular of JavaScript library for building user interfaces, known for its component-based architecture and virtual DOM implementation which ensures efficient rendering and updates.
 
 - React Router: A routing library for React applications, enabling navigation between different components and handling URL matching.
 
