@@ -1,5 +1,6 @@
 # FitSynergy: Unleash Your Metamorphic Odyssey
 
+
 Embark on a transformative journey, where the symphony of mind, body and spirit converges into a harmonious crescendo. FitSynergy, an immersive and empowering fitness tracking companion, beckons you to transcend conventional boundaries and embrace the boundless realms of physical and mental invigoration.
 
  In rather simple words, this is a cutting-edge fitness tracking application designed to empower users on their journey towards optimal health and well-being.With FitSynergy, users can embark on a transformative fitness odyssey, leveraging the power of cutting-edge technology to unlock their full potential and achieve their health and wellness goals with unprecedented precision and insight.
@@ -7,15 +8,54 @@ Embark on a transformative journey, where the symphony of mind, body and spirit 
 A Kaleidoscope of Wellness
 
 Immerse yourself in a multifaceted tapestry of features, meticulously woven to elevate your fitness odyssey to unprecendented heights. FitSynergy is an indispensable ally on your quests for holistic rejuvenation. Features:
+
   
-- 
-- 
-- 
-- 
-- 
-- 
+- Goal Setting Page
+
+ Stay motivated and focused on your fitness journey with our intuitive goal setting feature. Set specific, measurable, achievable, relevant, and time-bound (SMART) goals for various aspects of your fitness routine. Track your progress in real-time and celebrate milestones as you work towards achieving your desired outcomes.
+
+
+- Nutrition Tracking
+
+  Maintain a well-balanced diet and monitor your caloric intake with our comprehensive nutrition tracking feature. Access an extensive database of foods and their detailed nutritional information, including macronutrients, micronutrients, and calorie counts. Gain valuable insights into your dietary habits with intuitive visualizations and personalized recommendations for optimizing your nutrition.
+
+
+- Workouts Section
+
+  Explore a vast library of pre-designed workout routines tailored to your fitness level, preferences, and goals.
+
+
+- Settings Page
+
+  Personalize your fitness tracking experience by adjusting various settings to suit your preferences. Configure app notifications, measurement units,
+
+
+- About and Contact Page
+  Learn more about the app's features, development team, and vision for promoting a healthy lifestyle. Reach out to our dedicated support team, for assistance and inquiries.
+  
+
+
+  With these robust features, our fitness tracking app empowers you to take control of your health and fitness goals. Whether you're a seasoned athlete or just starting your wellness journey, our app provides the tools and resources you need to achieve sustainable results and lead an active, balanced lifestyle.
+
+
 
 ## Table of Contents 
+
+1. [Getting Started](URL)
+
+2. [Technology Stack](URL)
+
+3. [License](URL)
+
+4. [Acknowledgements](URL)
+
+5. [Contributing](URL)
+
+6. [Contact Information](URL)
+
+7. [Final Remarks](URL)
+
+
 
 ## Getting Started
 
@@ -25,12 +65,17 @@ To begin using the FitSynergy fitness tracking app, follow these steps:
 
 1. Clone the repository: 
 ~~~
-git clone
+git clone https://github.com/Dinah-Ngatia5/group4-fitness-tracking-app.git
 ~~~
 
 2. Navigate to the project directory:
 ~~~
-cd
+cd group4-fitness-tracking-app.git 
+~~~
+
+followed by, where the app is actually located: 
+~~~
+cd fitness-tracking-app
 ~~~
 
 3. Install the required dependencies 
@@ -44,7 +89,7 @@ To start the FitSynergy app, run the following command:
 ~~~
 npm start
 ~~~
-This will launch the app in your default web browser. If it doesn't open automatically, you can access it by navigating to the port provided in the ports section in your terminal in your browser.
+This will launch the app in your default web browser. If it doesn't open automatically, you can access it by navigating to the port provided in the ports section in your terminal in the browser.
 
 
 ### Usage 
