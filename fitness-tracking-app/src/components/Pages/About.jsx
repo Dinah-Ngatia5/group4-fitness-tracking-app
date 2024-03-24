@@ -33,7 +33,12 @@ const About = () => {
         About 
       </Typography>
       <Typography variant="body1" paragraph>
-        Our fitness tracking app is designed to help you achieve your fitness goals by tracking your workouts, monitoring your progress, and providing personalized recommendations.
+        Our fitness tracking app is designed to help you achieve your fitness goals. FitSynergy is a cutting-edge fitness tracking application
+       that harnesses the power of modern web and mobile technologies to revolutionize the way individuals approach their health and wellness journeys.
+       It has been developed by a team of passionate fitness enthusiasts, software engineers, and health professionals. FitSynergy is a culmination of years of research,
+        innovation, and a deep understanding of the intricate relationship between physical activity, nutrition, and overall well-being.
+        Our team of experts continuously strives to incorporate the latest advancements in technology and scientific research, ensuring that our application 
+        remains at the forefront of the fitness tracking industry.
       </Typography>
       <Typography variant="body1" paragraph className={classes.featureList}>
         Features of our app include:
@@ -49,6 +54,27 @@ const About = () => {
       </Typography>
       <Typography variant="body1">
         Start tracking your fitness today and unlock your full potential!
+      </Typography>
+      <Typography variant="body1">
+      <h2>Contact Information</h2>
+      <p>For any inquiries, support requests, or feedback, please feel free to reach out to us through the following channels:</p>
+      <ul>
+        <li>
+          <strong>Email:</strong> <a href="mailto:support@fitsynergy.com">support@fitsynergy.com</a>
+        </li>
+        <li>
+          <strong>Phone:</strong> +254 723 898 456
+        </li>
+        </ul>
+      </Typography>
+      <Typography variant="body1">
+      <h2>Licensing</h2>
+      <p>FitSynergy is released under the <a href="https://opensource.org/licenses/MIT">MIT License</a>. You are free to use, modify, and distribute this software as per the terms of the license.</p>
+      <ul>
+        <li>The MIT License is a permissive open-source license that allows for free use, modification, and distribution of the software, both for commercial and non-commercial purposes.</li>
+        <li>By using FitSynergy, you agree to comply with the terms and conditions outlined in the MIT License.</li>
+        <li>For more information on the MIT License and its implications, please refer to the <a href="https://github.com/your-username/FitSynergy/blob/main/LICENSE">LICENSE</a> file within our GitHub repository.</li>
+      </ul>
       </Typography>
     </Paper>
   );
