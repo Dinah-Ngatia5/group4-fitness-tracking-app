@@ -10,28 +10,33 @@ import Register from './components/Pages/Auth/Register.jsx';
 import NutritionTracking from './components/Pages/NutritionTracking.jsx';
 import ProtectedRoute from './components/Routes/ProtectedRoute.jsx';
 import Footer from "./components/Footer";
+import Contacts from './components/Contacts.jsx';
+import About from './components/About.jsx';
 
 function App() {
+  
   return (
     <>
       <Router>
         <Navbar />
-        <Headers />
+        
+        
 
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="headers" element={<Headers />} />
           
           <Route path="/login" element={<Login />} />
           
           <Route path="/register" element={<Register />} />
 
-          <Route path="/nutrition" element={<NutritionTracking />} />
-
-          
+          {/* <Route path="/nutrition" element={<NutritionTracking />} /> */}
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/about" element={<About />} />
 
           
           <Route path="/dashboard" element={<ProtectedRoute Component={Dashboard} />} />
-
+          
         </Routes>
         
         <Footer />

@@ -6,6 +6,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import SignOut from './Pages/Auth/SignOut';
 
+
+
 function Navbar() {
   return (
     <AppBar position="static">
@@ -18,9 +20,10 @@ function Navbar() {
         <Button component={Link} to="/analytics" color="inherit">Analytics</Button>
         <Button component={Link} to="/dashboard" color="inherit">Dashboard</Button>
         <Button component={Link} to="/goal" color="inherit">Goal Setting</Button>
-        {/* <Button component={Link} to="/nutrition" color="inherit">Nutrition Tracking</Button> */}
+        <Button component={Link} to="/nutrition" color="inherit">Nutrition Tracking</Button>
         <Button component={Link} to="/social" color="inherit">Social Feed</Button>
-        <Button component={Link} to="/workoutplan" color="inherit">Workout Plan</Button>
+        <Button component={Link} to="/about" color="inherit">About</Button>
+        <Button component={Link} to="/contacts" color="inherit">Contacts</Button>
         <Button component={Link} to="/login" color="inherit">Login</Button>
         <SignOut />
       </Toolbar>
