@@ -11,8 +11,8 @@ const App = () => {
   const [targetWeight, setTargetWeight] = useState(0);
   const [dailyCaloriesGoal, setDailyCaloriesGoal] = useState(0);
   const [weeklyWeights, setWeeklyWeights] = useState([]);
-  const [fetchingData, setFetchingData] = useState(false); // State to control data fetching
-  const apiKey = '0fa3f58ee10dbd236b3ba8b16c83f7c8';
+  const [fetchingData, setFetchingData] = useState(false); 
+  const apiKey = 'd9257d8b9aca4d04b656f1d364932183';
 
   useEffect(() => {
     const fetchFoodData = async () => {
@@ -40,7 +40,6 @@ const App = () => {
       fetchFoodData();
     }
 
-    // Clean-up function to stop fetching when component unmounts
     return () => {
       setFetchingData(false);
     };
@@ -63,7 +62,7 @@ const App = () => {
   const handleWeeklyWeightSubmit = (e) => {
     e.preventDefault();
     setWeeklyWeights([...weeklyWeights, currentWeight]);
-    setCurrentWeight(0); // Reset current weight after submission
+    setCurrentWeight(0); 
   };
 
   const handleFoodEatenSubmit = (food) => {
@@ -99,7 +98,7 @@ const App = () => {
             </ul>
           </div>
         ) : (
-          <p>No data found.</p>
+          <p></p>
         )}
       </div>
       <div>
@@ -136,10 +135,7 @@ const App = () => {
           </ul>
         </div>
       )}
-      <div>
-        <h2>Food Eaten Submission</h2>
-        <FoodEatenForm onSubmit={handleFoodEatenSubmit} />
-      </div>
+      
     </div>
   );
 };
