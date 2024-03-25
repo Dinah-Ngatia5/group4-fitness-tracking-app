@@ -9,9 +9,10 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 600,
     backgroundColor: '#f5f5dc', // Beige 
     borderRadius: theme.spacing(2),
+  
   },
   title: {
-    fontSize: '2.5rem',
+    fontSize: '1.5rem',
     fontWeight: 'bold',
     marginBottom: theme.spacing(3),
     color: '#333',

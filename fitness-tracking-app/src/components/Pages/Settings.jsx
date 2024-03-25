@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
-    height: '100vh',
+    height: '120vh',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -84,12 +84,14 @@ const Settings = () => {
   };
 
   return (
-    <Container maxWidth="sm" className={classes.container}>
+   <Container maxWidth="sm" className={classes.container}>
+  
       <Typography variant="h4" gutterBottom>
         Settings
       </Typography>
       <TextField
         name="name"
+        type="name"
         label="Name"
         value={profile.name}
         onChange={handleChange}
@@ -99,6 +101,7 @@ const Settings = () => {
       <TextField
         name="age"
         label="Age"
+        type="age"
         value={profile.age}
         onChange={handleChange}
         fullWidth
@@ -119,6 +122,7 @@ const Settings = () => {
       <TextField
         name="weight"
         label="Weight"
+        type="weight"
         value={profile.weight}
         onChange={handleChange}
         fullWidth
@@ -127,6 +131,7 @@ const Settings = () => {
       <TextField
         name="height"
         label="Height"
+        type="height"
         value={profile.height}
         onChange={handleChange}
         fullWidth

@@ -29,13 +29,13 @@ function App() {
           <Route path="headers" element={<Headers />} />
           
           <Route path="/login" element={<Login />} />
-          
+          <Route path="goalsetting" element={<GoalSetting />} />
           <Route path="/register" element={<Register />} />
          <Route path="/nutrition"  element= {<NutritionTracking />} />
           {/* <Route path="/nutrition" element={<NutritionTracking />} /> */}
           <Route path="/contacts" element={<ContactUS />} />
           <Route path="/about" element={<About />} />
-           
+          <Route path="/workoutplan" element={<WorkoutPlan />} />
           
           <Route path="/dashboard" element={<ProtectedRoute Component={Dashboard} />} />
           <Route path="/settings"  element= {<Settings />} />
