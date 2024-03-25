@@ -70,6 +70,7 @@ const ContactUS = () => {
           className={classes.textField}
           variant="outlined"
           label="Name"
+          type='Name'
           onChange={handleChange}
           fullWidth
           required
@@ -116,4 +117,4 @@ const ContactUS = () => {
   );
 };
 
-export default ContactUs ;
+export default ContactUS;

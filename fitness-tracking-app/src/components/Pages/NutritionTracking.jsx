@@ -1,7 +1,7 @@
 // Nutrition tracking
 // Nutrition tracking
 import React, { useState, useEffect } from 'react';
-import './App.css';
+
 
 
 const NutirionTracking = () => {

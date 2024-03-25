@@ -1,83 +1,72 @@
 import React from 'react';
-import { Typography, Paper, makeStyles } from '@material-ui/core';
+import { Container, Typography, Grid, Paper, Avatar } from '@mui/material';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: theme.spacing(3),
-    margin: 'auto',
-    maxWidth: 600,
-    backgroundColor: '#f0f0f0',
-    borderRadius: theme.spacing(2),
-  },
-  title: {
-    fontSize: '2.5rem',
-    fontWeight: 'bold',
-    marginBottom: theme.spacing(2),
-    color: '#333',
-    textAlign: 'center',
-  },
-  featureList: {
-    marginBottom: theme.spacing(2),
-  },
-  featureItem: {
-    marginBottom: theme.spacing(1),
-  },
-}));
 
 const About = () => {
-  const classes = useStyles();
-
   return (
-    <Paper className={classes.root} elevation={3}>
-      <Typography variant="h2" className={classes.title} gutterBottom>
-        About 
+    <Container maxWidth="md">
+      <Typography variant="h3" gutterBottom>
+        About Us
       </Typography>
-      <Typography variant="body1" paragraph>
-        Our fitness tracking app is designed to help you achieve your fitness goals. FitSynergy is a cutting-edge fitness tracking application
-       that harnesses the power of modern web and mobile technologies to revolutionize the way individuals approach their health and wellness journeys.
-       It has been developed by a team of passionate fitness enthusiasts, software engineers, and health professionals. FitSynergy is a culmination of years of research,
-        innovation, and a deep understanding of the intricate relationship between physical activity, nutrition, and overall well-being.
-        Our team of experts continuously strives to incorporate the latest advancements in technology and scientific research, ensuring that our application 
-        remains at the forefront of the fitness tracking industry.
-      </Typography>
-      <Typography variant="body1" paragraph className={classes.featureList}>
-        Features of our app include:
-        <ul>
-          <li className={classes.featureItem}>Workout tracking: Log your workouts including exercises, sets, reps, and weights.</li>
-          <li className={classes.featureItem}>Progress monitoring: Visualize your progress over time with charts and graphs.</li>
-          <li className={classes.featureItem}>Personalized recommendations: Receive tailored workout plans and nutrition advice based on your goals and preferences.</li>
-          <li className={classes.featureItem}>Community support: Connect with other users, join challenges, and share your achievements.</li>
-        </ul>
-      </Typography>
-      <Typography variant="body1" paragraph>
-        Whether you're a beginner looking to get started or an experienced athlete striving for new heights, our app is here to support you on your fitness journey.
-      </Typography>
-      <Typography variant="body1">
-        Start tracking your fitness today and unlock your full potential!
-      </Typography>
-      <Typography variant="body1">
-      <h2>Contact Information</h2>
-      <p>For any inquiries, support requests, or feedback, please feel free to reach out to us through the following channels:</p>
-      <ul>
-        <li>
-          <strong>Email:</strong> <a href="mailto:support@fitsynergy.com">support@fitsynergy.com</a>
-        </li>
-        <li>
-          <strong>Phone:</strong> +254 723 898 456
-        </li>
-        </ul>
-      </Typography>
-      <Typography variant="body1">
-      <h2>Licensing</h2>
-      <p>FitSynergy is released under the <a href="https://opensource.org/licenses/MIT">MIT License</a>. You are free to use, modify, and distribute this software as per the terms of the license.</p>
-      <ul>
-        <li>The MIT License is a permissive open-source license that allows for free use, modification, and distribution of the software, both for commercial and non-commercial purposes.</li>
-        <li>By using FitSynergy, you agree to comply with the terms and conditions outlined in the MIT License.</li>
-        <li>For more information on the MIT License and its implications, please refer to the <a href="https://github.com/your-username/FitSynergy/blob/main/LICENSE">LICENSE</a> file within our GitHub repository.</li>
-      </ul>
-      </Typography>
-    </Paper>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Paper elevation={3} style={{ padding: 20 }}>
+            <Typography variant="h5" gutterBottom>
+              Our Mission
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              At Fitness Tracker, our mission is to empower individuals to lead healthier lives by providing
+              comprehensive fitness tracking solutions. We believe that everyone should have access to the tools
+              and resources they need to achieve their fitness goals and improve their overall well-being.
+            </Typography>
+          </Paper>
+        </Grid>
+        <Grid item xs={12}>
+          <Paper elevation={3} style={{ padding: 20 }}>
+            <Typography variant="h5" gutterBottom>
+              Our Team
+            </Typography>
+            <Grid container spacing={2}>
+              {teamMembers.map(member => (
+                <Grid item key={member.name} xs={12} sm={6} md={4} lg={3}>
+                  <Avatar alt={member.name} src={member.avatar} sx={{ width: 120, height: 120, margin: 'auto' }} />
+                  <Typography variant="h6" align="center" gutterBottom>
+                    {member.name}
+                  </Typography>
+                  <Typography variant="body2" align="center">
+                    {member.role}
+                  </Typography>
+                </Grid>
+              ))}
+            </Grid>
+          </Paper>
+        </Grid>
+      </Grid>
+    </Container>
   );
 };
+
+const teamMembers = [
+  {
+    name: 'Alfred Oriri',
+    role: 'Founder & CEO',
+    avatar: 'https://via.placeholder.com/150', // Add actual image URLs
+  },
+  {
+    name: 'Dinah Ngatia',
+    role: 'Founder & CEO',
+    avatar: 'https://via.placeholder.com/150', // Add actual image URLs
+  },
+  {
+    name: 'Ted Gitonga',
+    role: 'Founder & CEO',
+    avatar: 'https://via.placeholder.com/150', // Add actual image URLs
+  },
+  {
+    name: 'Brian Tsalwa',
+    role: 'Founder & CEO',
+    avatar: 'https://via.placeholder.com/150', // Add actual image URLs
+  },
+];
 
 export default About;
