@@ -4,7 +4,7 @@ import {useState} from "react";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: theme.spacing(3),
+    padding: theme.spacing(2),
     margin: 'auto',
     maxWidth: 600,
     backgroundColor: '#f5f5dc', // Beige 
@@ -61,7 +61,7 @@ const ContactUS = () => {
 
 
   return (
-    <Paper className={classes.root} elevation={3}>
+    <Paper className={classes.root} >
       <Typography variant="h2" className={classes.title} gutterBottom>
         Contact Us
       </Typography>

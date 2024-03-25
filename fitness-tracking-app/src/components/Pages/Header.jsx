@@ -32,20 +32,21 @@ const Headers = () => (
 const styles = {
   headerContainer: {
     position: 'relative',
-    background: `url('src/assets/risen.jpg')`, // Replace 'your-image-url.jpg' with your actual image URL
+    background: `url('src/assets/risen.jpg')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: 300, // Adjust the height as needed
+    height: 300, 
     display: 'flex',
     alignItems: 'center',
   },
+
   overlay: {
     position: 'absolute',
     top: 0,
     left: 0,
     width: '100%',
     height: '100%',
-    background: 'rgba(0, 0, 0, 0.5)', // Semi-transparent black overlay
+    background: 'rgba(0, 0, 0, 0.5)', 
   },
   content: {
     zIndex: 1,
@@ -80,7 +81,7 @@ const styles = {
     marginRight: 10,
     borderRadius: 20,
     fontSize: 12,
-    color: '#333', // Badge text color
+    color: '#333',
   },
 };
 

@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from 'react';
 
 
-
-const NutirionTracking = () => {
+const NutritionTracking = () => {
   const [foodData, setFoodData] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [caloriesGained, setCaloriesGained] = useState(0);
@@ -204,4 +203,4 @@ const FoodEatenForm = ({ onSubmit }) => {
   );
 };
 
-export default NutirionTracking;
+export default NutritionTracking;
