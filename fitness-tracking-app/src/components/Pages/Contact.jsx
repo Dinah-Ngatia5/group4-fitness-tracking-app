@@ -1,121 +1,89 @@
-import React from 'react';
-import { Paper, Typography, TextField, Button, makeStyles, Snackbar } from '@material-ui/core';
-import {useState} from "react";
+// import React, { useState } from 'react';
+// import { Button, TextField, Typography } from '@mui/material';
+// import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: theme.spacing(2),
-    margin: 'auto',
-    maxWidth: 600,
-    backgroundColor: '#f5f5dc', // Beige 
-    borderRadius: theme.spacing(2),
-  
-  },
-  title: {
-    fontSize: '1.5rem',
-    fontWeight: 'bold',
-    marginBottom: theme.spacing(3),
-    color: '#333',
-    textAlign: 'center',
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: theme.spacing(2),
-  },
-  textField: {
-    backgroundColor: 'white',
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   formSection: {
+//     display: 'flex',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     marginTop: theme.spacing(4),
+//   },
+//   contactForm: {
+//     display: 'flex',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//     gap: theme.spacing(2),
+//   },
+//   formControl: {
+//     display: 'flex',
+//     flexDirection: 'column',
+//     alignItems: 'flex-start',
+//     gap: theme.spacing(1),
+//   },
+//   submitButton: {
+//     marginTop: theme.spacing(2),
+//   },
+// }));
 
-const ContactUS = () => {
-  const classes = useStyles();
-  const [openSnackbar, setOpenSnackbar] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
+// const ContactForm = () => {
+//   const classes = useStyles();
+//   const [name, setName] = useState('');
+//   const [email, setEmail] = useState('');
+//   const [text, setText] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    localStorage.setItem('contactFormData', JSON.stringify(formData));
+//   const onSubmit = (event) => {
+//     event.preventDefault(); // Prevent page default refresh
+//     // Do something with the form data
+//   };
 
-    setFormData({
-      name: "",
-      email: "",
-      message: ""
-    });
+//   return (
+//     <section className={classes.formSection}>
+//       <div className={classes.contactForm}>
+//         <Typography variant="h5">Contact Us</Typography>
+//         <form onSubmit={onSubmit} className={classes.contactForm}>
+//           <div className={classes.formControl}>
+//             <TextField
+//               variant="outlined"
+//               label="Name"
+//               value={name}
+//               onChange={(e) => setName(e.target.value)}
+//               fullWidth
+//               required
+//             />
+//           </div>
+//           <div className={classes.formControl}>
+//             <TextField
+//               variant="outlined"
+//               label="Email"
+//               type="email"
+//               value={email}
+//               onChange={(e) => setEmail(e.target.value)}
+//               fullWidth
+//               required
+//             />
+//           </div>
+//           <div className={classes.formControl}>
+//             <TextField
+//               variant="outlined"
+//               label="Text"
+//               multiline
+//               rows={4}
+//               value={text}
+//               onChange={(e) => setText(e.target.value)}
+//               fullWidth
+//               required
+//             />
+//           </div>
+//           <div className={classes.submitButton}>
+//             <Button variant="contained" color="primary" type="submit">
+//               Submit
+//             </Button>
+//           </div>
+//         </form>
+//       </div>
+//     </section>
+//   );
+// };
 
-    setOpenSnackbar(true);
-    setTimeout(() => {
-      setOpenSnackbar(false);
-    }, 3000);
-  };
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-
-
-  return (
-    <Paper className={classes.root} >
-      <Typography variant="h2" className={classes.title} gutterBottom>
-        Contact Us
-      </Typography>
-      <form className={classes.form} onSubmit={handleSubmit}>
-        <TextField
-          className={classes.textField}
-          variant="outlined"
-          label="Name"
-          type='Name'
-          onChange={handleChange}
-          fullWidth
-          required
-        />
-        <TextField
-        className={classes.textField}
-        variant="outlined"
-        label="Email"
-        type="email"
-        onChange={handleChange}
-        fullWidth
-        required
-        />
-        <TextField
-          className={classes.textField}
-          variant="outlined"
-          label="Message"
-          onChange={handleChange}
-          multiline
-          minRows={5}
-          fullWidth
-          required
-        />
-        <Button variant="contained" color="primary" type="submit">
-          Submit
-        </Button>
-      </form>
-      <Snackbar
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-        open={openSnackbar}
-        autoHideDuration={3000}
-        onClose={() => setOpenSnackbar(false)}
-        message="Form submitted successfully!"
-        action={
-          <Button color="secondary" size="small" onClick={() => setOpenSnackbar(false)}>
-            Close
-          </Button>
-        }
-      />
-    </Paper>
-  );
-};
-
-export default ContactUS;
+// export default ContactForm;

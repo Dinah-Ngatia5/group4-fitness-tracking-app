@@ -9,7 +9,8 @@ import Register from './components/Pages/Auth/Register.jsx';
 import NutritionTracking from './components/Pages/NutritionTracking.jsx';
 import ProtectedRoute from './components/Routes/ProtectedRoute.jsx';
 import Footer from "./components/Footer.jsx";
-import ContactUS from './components/Pages/Contact.jsx';
+// import ContactUS from './components/Pages/Contact.jsx';
+// import Details from './components/Pages/Details.jsx';
 import About from './components/Pages/About.jsx';
 import Settings from "./components/Pages/Settings.jsx";
 import WorkoutPlan from "./components/Pages/WorkoutPlan.jsx";
@@ -33,10 +34,10 @@ function App() {
           <Route path="/register" element={<Register />} />
          <Route path="/nutrition"  element= {<NutritionTracking />} />
           {/* <Route path="/nutrition" element={<NutritionTracking />} /> */}
-          <Route path="/contacts" element={<ContactUS />} />
+          {/* <Route path="/contacts" element={<ContactUS />} /> */}
           <Route path="/about" element={<About />} />
           <Route path="/workoutplan" element={<WorkoutPlan />} />
-          
+          {/* <Route path="/details" element={<Details />} /> */}
           <Route path="/dashboard" element={<ProtectedRoute Component={Dashboard} />} />
           <Route path="/settings"  element= {<Settings />} />
         </Routes>

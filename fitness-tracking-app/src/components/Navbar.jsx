@@ -21,10 +21,10 @@ function Navbar() {
         <Button component={Link} to="/goalsetting" color="inherit">GoalSetting</Button>
         <Button component={Link} to="/nutrition" color="inherit">NutritionTracking</Button>
         <Button component={Link} to="/workoutplan" color="inherit">WorkoutPlan</Button>
-        <Button component={Link} to="/details" color="inherit">Details</Button>
+        {/* <Button component={Link} to="/details" color="inherit">Details</Button> */}
         <Button component={Link} to="/settings" color="inherit">Settings</Button>
         <Button component={Link} to="/about" color="inherit">About</Button>
-        <Button component={Link} to="/contacts" color="inherit">Contacts</Button>
+        {/* <Button component={Link} to="/contacts" color="inherit">Contacts</Button> */}
         <Button component={Link} to="/login" color="inherit">Login</Button>
         <SignOut />
       </Toolbar>
