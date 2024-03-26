@@ -64,7 +64,7 @@ const ExerciseDetails = ({ exerciseId }) => {
 
   if(!exerciseDetails) {
     return <Typography>Loading...</Typography>;
-  };
+  }
 
   return(
     <div>
