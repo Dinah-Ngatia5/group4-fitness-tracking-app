@@ -10,7 +10,7 @@ function Navbar() {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component={Link} to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          Fitness Tracker
+          Fitsynergy
         </Typography>
 
 

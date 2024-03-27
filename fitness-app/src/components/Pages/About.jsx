@@ -15,7 +15,7 @@ const About = () => {
               Our Mission
             </Typography>
             <Typography variant="body1" gutterBottom>
-              At Fitness Tracker, our mission is to empower individuals to lead healthier lives by providing
+              At FitSynergy, our mission is to empower individuals to lead healthier lives by providing
               comprehensive fitness tracking solutions. We believe that everyone should have access to the tools
               and resources they need to achieve their fitness goals and improve their overall well-being.
             </Typography>

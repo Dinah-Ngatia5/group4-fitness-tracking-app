@@ -17,7 +17,7 @@ const HomePage = () => {
     >
       <Container maxWidth="md" style={{ textAlign: 'center', backgroundColor: 'rgba(255, 255, 255, 0.8)', padding: '20px' }}>
         <Typography variant="h3" gutterBottom>
-          Welcome to Fitsynergy
+          Welcome to FitSynergy
         </Typography>
         <Typography variant="h5" gutterBottom>
           Start your fitness journey today!

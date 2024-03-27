@@ -6,7 +6,7 @@ const Footer = () => {
     <AppBar position="fixed" color="primary" style={{ top: 'auto', bottom: 0 }}>
       <Toolbar>
         <Typography variant="body1" color="inherit">
-          © {new Date().getFullYear()} Fitness Tracker. All rights reserved.
+          © {new Date().getFullYear()} FitSynergy. All rights reserved.
         </Typography>
       </Toolbar>
     </AppBar>
